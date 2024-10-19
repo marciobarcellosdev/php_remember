@@ -1,21 +1,4 @@
 
-<?php 
-//echo $_SERVER['HTTP_HOST'];
-//echo '<pre>'; print_r($_SERVER); echo '</pre>';
-//print_r ($_SERVER["HTTP_X_REAL_IP"]);
-//echo '<pre>'; print_r($_SERVER['HTTP_X_REAL_IP']); echo '</pre>';
-
-// $ip = isset($_SERVER['HTTP_CLIENT_IP']) 
-//     ? $_SERVER['HTTP_CLIENT_IP'] 
-//     : (isset($_SERVER['HTTP_X_FORWARDED_FOR']) 
-//       ? $_SERVER['HTTP_X_FORWARDED_FOR'] 
-//       : $_SERVER['REMOTE_ADDR']);
-
-// echo 'O IP E: '.$ip;
-
-$filesCounter = checkRegisteredFiles();
-
-?>
 
 <html>
 <head>
@@ -226,3 +209,4 @@ $filesCounter = checkRegisteredFiles();
 
 </body>
 </html>
+
