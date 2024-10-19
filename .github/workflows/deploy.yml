@@ -21,7 +21,7 @@ jobs:
         target: "/var/www/remember.projectdev.services/html"
 
     - name: Executing remote command
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v1.1.0
       with:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
