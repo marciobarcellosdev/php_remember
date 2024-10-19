@@ -22,7 +22,7 @@ $filesCounter = checkRegisteredFiles();
 <html>
 <head>
   <link rel="stylesheet" href="css/sty1.css">
-  <title>send</title>
+  <title>remember</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="javascript/notify.min.js"></script>
