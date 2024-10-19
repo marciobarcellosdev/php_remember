@@ -1,16 +1,16 @@
 <?php
     // SERVIDOR REMOTO
-    // $servername = "projectdev.services";
-    // $username = "theboss";
-    // $password = "Manu!6273";
-    // $dbname = "app_send";
-    // $port = "39399";
+    $servername = "projectdev.services";
+    $username = "theboss";
+    $password = "Manu!6273";
+    $dbname = "app_send";
+    $port = "39399";
 
     // SERVIDOR LOCAL
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "app_send";
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "app_send";
 
     //$conn = new mysqli($servername, $username, $password, $dbname, $port);
     $conn = new mysqli($servername, $username, $password, $dbname);
