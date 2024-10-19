@@ -5,15 +5,14 @@
     $password = "Manu!6273";
     $dbname = "app_send";
     $port = "39399";
+    $conn = new mysqli($servername, $username, $password, $dbname, $port);
 
     // SERVIDOR LOCAL
     // $servername = "localhost";
     // $username = "root";
     // $password = "";
     // $dbname = "app_send";
-
-    //$conn = new mysqli($servername, $username, $password, $dbname, $port);
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    //$conn = new mysqli($servername, $username, $password, $dbname);
         
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
