@@ -37,25 +37,28 @@ $(document).ready(function(e) {
         $.notify(data.notifyMsg, data.notifyType);
         //$.notify(data.whatsapp, data.notifyType);
 
-        $('#uploadInfo').html(data.combinedResult);
-        $('#form')[0].reset();
-        $('#form').css("opacity", "");
-        $("#submit").prop('disabled', false);
-        $("#arquivo").prop('disabled', false);
+        if(data.dbresult >= 1){
+          $('#uploadInfo').html(data.combinedResult);
+          $('#form')[0].reset();
+          $('#form').css("opacity", "");
+          $("#submit").prop('disabled', false);
+          $("#arquivo").prop('disabled', false);
 
-        $("#tableRegistryUpload").prepend("<tr><td id='tdID'>???</td>" +
-        "<td id='tdDate'>" + data.uploadDate + "</td>" +
-        "<td id='tdTime'>" + data.uploadTime + "</td>" +
-        "<td id='tdSize'>" + data.fileSize + "</td>" +
-        "<td id='tdType'> " + data.fileType + "</td>" +
-        "<td id='tdExistsFile'>???</td>" +
-        "<td id='tdNameFile'>" + data.fileName + "</td>" +
-        "<td id='tdDownload'>???</td>" +
-        "<td id='tdDelete'>???</td>" +
-        "<td></td></tr>")
+          $("#tableRegistryUpload").prepend("<tr><td id='tdID'>???</td>" +
+          "<td id='tdDate'>" + data.uploadDate + "</td>" +
+          "<td id='tdTime'>" + data.uploadTime + "</td>" +
+          "<td id='tdSize'>" + data.fileSize + "</td>" +
+          "<td id='tdType'> " + data.fileType + "</td>" +
+          "<td id='tdExistsFile'>???</td>" +
+          "<td id='tdNameFile'>" + data.fileName + "</td>" +
+          "<td id='tdDownload'>???</td>" +
+          "<td id='tdDelete'>???</td>" +
+          "<td></td></tr>")
 
-        //x_arquivos();
-        //$('#x_resultado').text(mostra1);               	   
+          //x_arquivos();
+          //$('#x_resultado').text(mostra1); 
+        }
+                      	   
       },
       error: function (request, status, error) {
         //alert(request.responseText);

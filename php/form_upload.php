@@ -100,10 +100,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 
                 if(file_exists(SITE_ROOT_UPLOAD."//files/" . $fileNameFinal)){
                     $return_arr['fileUploadResult'] = 'Your file was uploaded successfully';
-                    //echo "<br><textoRes>[[ Your file was uploaded successfully ]]</textoRes>";                                               
                 }else{
                     $return_arr['fileUploadResult'] = 'Your file NOT exists';
-                    //echo "<br><textoRes>[[ Your file NOT exists ]]</textoRes>";                                               
                 }
 
                 $return_arr['dbresult'] = insertRegistryUpload($varUploadDate, $varUploadTime, $fileNameFinal, $fileSizeFinal, $fileType, $ipOfUploader);
@@ -122,17 +120,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             } 
         } else{
             $return_arr['uploadError'] = 'There was a problem uploading your file. Please try again';
-            //echo "<textoerro>[ Error: There was a problem uploading your file. Please try again. ]</textoerro>"; 
         }
     } else{
         $return_arr['uploadError'] = 'Error: ' . $_FILES["arquivo"]["error"];
-        //echo "<textoerro>[ Error: " . $_FILES["arquivo"]["error"] . " ]</textoerro>";
     }
 }
 //var_dump($return_arr);
 //print_r ($return_arr);
 echo json_encode($return_arr);
-
-echo 'fim';
 
 ?>
