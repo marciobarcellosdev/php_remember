@@ -1,4 +1,7 @@
 <?php
+
+echo 'inicio';
+
 //define ('SITE_ROOT', realpath(dirname(__FILE__, 1)));
 define ('SITE_ROOT_UPLOAD', realpath(dirname(__FILE__, 2)));
 
@@ -6,6 +9,8 @@ include 'crud.php';
 include 'notify_define.php';
 //include 'api_whatsapp.php';
 include 'max_file_size.php';
+
+echo 'passou 1';
 
 $return_arr = array();
 
@@ -132,20 +137,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 //print_r ($return_arr);
 echo json_encode($return_arr);
 
-
-
-/*
-
-CREATE TABLE `filesend` (
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    `date` datetime NOT NULL,
-    `name` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-    `size` float NOT NULL,
-    `type` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-    `ip` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-    PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-*/
+echo 'fim';
 
 ?>
