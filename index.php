@@ -223,7 +223,7 @@ $filesCounter = checkRegisteredFiles();
     <div class="push"></div>
   </div> <!-- DIV WRAPPER -->
   <div class="footer">
-    <div id="valueFooter" class="textoverde pictureframe">Developer: Marcio Barcellos | Created on: 24/08/2019 | Last update: 03/04/2020 > 14/02/2022 > 03/10/2022 > 14/12/2023</div>  
+    <div id="valueFooter" class="textoverde pictureframe">Developer: Marcio Barcellos | Created on: 24/08/2019 | Last update: 03/04/2020 > 14/02/2022 > 03/10/2022 > 14/12/2023 > 19/10/2024</div>  
   </div>
 
 </body>

@@ -2,7 +2,7 @@
 // https://makitweb.com/return-json-response-ajax-using-jquery-php/
 include 'crud.php';
 include 'notify_define.php';
-include 'api_whatsapp.php';
+//include 'api_whatsapp.php';
 
 // MENSAGEM DE DEBUG NO CONSOLE
 function debug_to_console($data) {
