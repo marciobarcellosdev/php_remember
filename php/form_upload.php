@@ -126,15 +126,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 $return_arr['dbresult'] = insertRegistryUpload($varUploadDate, $varUploadTime, $fileNameFinal, $fileSizeFinal, $fileType, $ipOfUploader);
                 if($return_arr['dbresult'] >= 1){
+                    
+                    echo ' - result maior que 1';
+                    
                     $return_arr['notifyMsg'] = $return_arr['dbresult'].REGISTRO_ADICIONADO;
                     $return_arr['notifyType'] = TYPE_SUCCESS;
                     //$return_arr['whatsapp'] = sendWhatsAppMessage($varWhatsAppMessage);
                 }else{
+
+
+                    echo ' - result NÃO maior que 1';
+
                     $return_arr['notifyMsg'] = OCORREU_ERRO_ADICIONAR;
                     $return_arr['notifyType'] = TYPE_ERROR;
                     //$return_arr['whatsapp'] = OCORREU_ERRO_API;
                 }
                 //echo json_encode($return_arr);
+                echo ' - passou 8';
             } 
         } else{
             $return_arr['uploadError'] = 'There was a problem uploading your file. Please try again';
