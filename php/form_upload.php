@@ -10,7 +10,7 @@ include 'notify_define.php';
 //include 'api_whatsapp.php';
 include 'max_file_size.php';
 
-echo 'passou 1';
+echo ' - passou 1';
 
 $return_arr = array();
 
@@ -32,6 +32,8 @@ function getGUID(){
     }
 }
 
+echo ' - passou 2';
+
 $guid = getGUID();
 $guidNumber = preg_replace('/[^0-9]+/', '', $guid);
 $guidLetter = preg_replace('/[^A-Z]+/', '', $guid);
@@ -45,11 +47,15 @@ date_default_timezone_set("America/Sao_Paulo");
 $varUploadDate = date("Y/m/d");
 $varUploadTime = date("H:i:s");
 
-// Check if the form was submitted
+echo ' - passou 3';
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // Check if file was uploaded without errors
     
+    echo ' - passou 4';
+
     if(isset($_FILES["arquivo"]) && $_FILES["arquivo"]["error"] == 0){
+
+        echo ' - passou 5';
 
         //$allowed = array('zip', '7z', 'rar', 'mp3', 'xml', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'exe'); 
         $allowed = array('zip', '7z', 'rar', 'mp3', 'xml', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'exe'); 
@@ -65,6 +71,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $fileExt = pathinfo($fileNameFinal, PATHINFO_EXTENSION);
         //if(!array_key_exists($ext, $allowed)) die("Error: Please select a valid file format.");                       
     
+
+        echo ' - passou 6';
+
         // Verify file size
         //$maxsize = 32 * 1024 * 1024;
         
@@ -112,6 +121,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     //echo "<br><textoRes>[[ Your file NOT exists ]]</textoRes>";                                               
                 }
                 
+
+                echo ' - passou 7';
+
                 $return_arr['dbresult'] = insertRegistryUpload($varUploadDate, $varUploadTime, $fileNameFinal, $fileSizeFinal, $fileType, $ipOfUploader);
                 if($return_arr['dbresult'] >= 1){
                     $return_arr['notifyMsg'] = $return_arr['dbresult'].REGISTRO_ADICIONADO;
