@@ -98,13 +98,18 @@ function insertRegistry(string $varDate, string $varTime, string $varAbout, stri
 
 function insertRegistryUpload(string $varDate, string $varTime, string $varFileName, string $varFileSize, string $varFileType, string $varIp) {
   
-  echo $varDate;
+  echo $varDate.' - '.$varTime.' - '.$varFileName.' - '.$varFileSize.' - '.$varFileType.' - '.$varIp;
   
   
   $stmt = $GLOBALS['conn']->prepare("INSERT INTO app_send_file (date, time, name, size, type, ip) VALUES (?, ?, ?, ?, ?, ?)");
+  echo 'insert 1';
+  
   $stmt->bind_param("ssssss", $varDate, $varTime, $varFileName, $varFileSize, $varFileType, $varIp);
+  echo 'insert 2';
   $stmt->execute();
+  echo 'insert 3';
   $varAffectedRows = $stmt->affected_rows;
+  echo 'insert 4';
   return $varAffectedRows;
 }
 

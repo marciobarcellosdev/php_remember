@@ -10,8 +10,6 @@ include 'notify_define.php';
 //include 'api_whatsapp.php';
 include 'max_file_size.php';
 
-echo ' - passou 1';
-
 $return_arr = array();
 
 function getGUID(){
@@ -32,8 +30,6 @@ function getGUID(){
     }
 }
 
-echo ' - passou 2';
-
 $guid = getGUID();
 $guidNumber = preg_replace('/[^0-9]+/', '', $guid);
 $guidLetter = preg_replace('/[^A-Z]+/', '', $guid);
@@ -47,15 +43,9 @@ date_default_timezone_set("America/Sao_Paulo");
 $varUploadDate = date("Y/m/d");
 $varUploadTime = date("H:i:s");
 
-echo ' - passou 3';
-
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     
-    echo ' - passou 4';
-
     if(isset($_FILES["arquivo"]) && $_FILES["arquivo"]["error"] == 0){
-
-        echo ' - passou 5';
 
         //$allowed = array('zip', '7z', 'rar', 'mp3', 'xml', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'exe'); 
         $allowed = array('zip', '7z', 'rar', 'mp3', 'xml', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'exe'); 
@@ -70,9 +60,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $fileNameFinal = $guidFinal."_".$fileNameTmp3;
         $fileExt = pathinfo($fileNameFinal, PATHINFO_EXTENSION);
         //if(!array_key_exists($ext, $allowed)) die("Error: Please select a valid file format.");                       
-    
-
-        echo ' - passou 6';
 
         // Verify file size
         //$maxsize = 32 * 1024 * 1024;
