@@ -4,7 +4,7 @@ define ('SITE_ROOT_UPLOAD', realpath(dirname(__FILE__, 2)));
 
 include 'crud.php';
 include 'notify_define.php';
-include 'api_whatsapp.php';
+//include 'api_whatsapp.php';
 include 'max_file_size.php';
 
 $return_arr = array();
