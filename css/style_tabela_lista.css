@@ -1,0 +1,168 @@
+
+table.lista {
+  background: #DCDCDC;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  margin: 1em;
+  opacity:0.9;
+}
+table.lista th {
+  border-bottom: 1px solid #364043;
+  color: black;
+  font-size: 0.688em;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+table.lista thead th#thID {
+  text-align: center;
+  /* color: green; */
+}
+
+table.lista thead th#thDate {
+  text-align: center;
+  /* color: green; */
+}
+
+table.lista thead th#thTime {
+  text-align: center;
+  /* color: green; */
+}
+
+table.lista thead th#thAbout {
+  text-align: right;
+  /* color: green; */
+}
+
+table.lista thead th#thComment {
+  text-align: left;
+  /* color: green; */
+}
+table.lista tbody td#tdID {
+  text-align: center;
+  /* color: red; */
+}
+
+/* TABLE UPLOAD */
+table.lista thead th#thSize {
+  text-align: center;
+  /* color: green; */
+}
+
+table.lista thead th#thType {
+  text-align: center;
+  /* color: green; */
+}
+
+table.lista thead th#thNameFile {
+  text-align: center;
+  /* color: green; */
+}
+table.lista thead th#thExistsFile {
+  text-align: center;
+  /* color: green; */
+}
+table.lista thead th#thIp {
+  text-align: center;
+  /* color: green; */
+}
+table.lista thead th#thDelete {
+  text-align: center;
+  /* color: green; */
+}
+table.lista thead th#thDownload {
+  text-align: center;
+  /* color: green; */
+}
+table.lista thead th#thDownloadsCounter {
+  text-align: center;
+  /* color: green; */
+}
+/* TABLE UPLOAD */
+
+
+table.lista tbody td#tdNoResult {
+  text-align: center;
+}
+table.lista tbody td#tdDate {
+  text-align: center;
+  /* color: red; */
+  /* background-color: orange; */
+}
+table.lista tbody td#tdTime {
+  text-align: center;
+  /* color: red; */
+  /* background-color: white; */
+}
+table.lista tbody td#tdAbout {
+  text-align: right;
+  /* color: red; */
+  /* background-color: orange; */
+}
+table.lista tbody td#tdComment {
+  text-align: left;
+  /* color: red; */
+  /* background-color: white; */
+}
+/* TABLE UPLOAD */
+table.lista tbody td#tdSize {
+  text-align: center;
+  /* color: red; */
+  /* background-color: orange; */
+}
+table.lista tbody td#tdType {
+  text-align: center;
+  /* color: red; */
+  /* background-color: white; */
+}
+table.lista tbody td#tdNameFile {
+  text-align: center;
+  /* color: red; */
+  /* background-color: white; */
+}
+table.lista tbody td#tdExistsFile {
+  text-align: center;
+  /* color: red; */
+  /* background-color: orange; */
+}
+table.lista tbody td#tdIp {
+  text-align: center;
+  /* color: red; */
+  /* background-color: white; */
+}
+table.lista tbody td#tdDownload {
+  text-align: center;
+  /* color: red; */
+}
+table.lista tbody td#tdDownloadsCounter {
+  text-align: center;
+  /* color: red; */
+}
+table.lista tbody td#tdDelete {
+  text-align: center;
+  /* color: red; */
+}
+/* TABLE UPLOAD */
+
+table.lista tr:nth-child(even) {
+  background: #D3D3D3;
+}
+
+table.lista td {
+  color: #00008B;
+  /* font-weight: 400; */
+  font-size: 0.688em;
+  /* padding: 0.65em 1em; */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+table.lista tbody tr {
+  transition: background 0.25s ease;
+}
+

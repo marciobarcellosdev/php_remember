@@ -1,0 +1,67 @@
+
+body {
+  background-color:  #060e13;
+  background-image: url("../assets/img7.jpg");
+  color: #000000; 
+  font-family: 'Trebuchet MS', sans-serif;
+  /* font-size: 10px; */
+  font-size: 0.688em;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+  height: 100%;
+  margin-top: 10px;
+  margin-left: 0px;
+ 
+}
+
+a:link {
+  text-decoration: none;
+  color: #4169E1;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #4169E1;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #00008B;
+}
+
+a:active {
+  text-decoration: none;
+  color: #4169E1;
+}
+
+div.wrapper {
+min-height: 100%;
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -40px;
+}
+
+div.push {
+  height: 40px;
+}
+
+div.footer {
+display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 5px;    
+  font-size: 0.688em;
+  background-color: #000000;
+  color: black;
+  opacity:0.8;
+}
+
+/*
+wrap="hard"
+
+hard : The input text is wrapped within the text area. (The text submitted to the server contains line breaks.)
+soft : The input text is wrapped within the text area. (The text submitted to the server doesn't contain line breaks.)
+off : The input text is not wrapped.
+*/

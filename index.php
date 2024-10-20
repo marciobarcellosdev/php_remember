@@ -21,7 +21,11 @@ $filesCounter = checkRegisteredFiles();
 
 <html>
 <head>
-  <link rel="stylesheet" href="css/sty1.css">
+  <link rel="stylesheet" href="css/style_body.css">
+  <link rel="stylesheet" href="css/style_buttons.css">
+  <link rel="stylesheet" href="css/style_custom.css">
+  <link rel="stylesheet" href="css/style_tabela_1.css">
+  <link rel="stylesheet" href="css/style_tabela_lista.css">
   <title>remember</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -61,9 +65,9 @@ $filesCounter = checkRegisteredFiles();
             <textarea cols="90" rows="10" id="comments" wrap="hard" style="text-transform:uppercase"></textarea><br><br>
             <table class="Envia">
               <tr>
-                <td align="center"><input type="checkbox" id="CheckboxJob"><div class="textoverdeenvia pictureframe">Enviar e-mail job</div></th>
-                <td align="center"><input type="checkbox" id="CheckboxEmail"><div class="textoverdeenvia pictureframe">Enviar e-mail</div></th>
-                <td align="center"><input type="checkbox" id="CheckboxWhatsApp"><div class="textoverdeenvia pictureframe">Enviar WhatsApp</div></th>
+                <td align="center"><input type="checkbox" id="CheckboxJob" disabled><div class="textoverdeenvia pictureframe">Enviar e-mail job</div></th>
+                <td align="center"><input type="checkbox" id="CheckboxEmail" disabled><div class="textoverdeenvia pictureframe">Enviar e-mail</div></th>
+                <td align="center"><input type="checkbox" id="CheckboxWhatsApp" disabled><div class="textoverdeenvia pictureframe">Enviar WhatsApp</div></th>
                 <td align="center"><input type="button" class="send1" id="btnSubmit" value="send" /></th>
               </tr>
             </table>
@@ -89,8 +93,6 @@ $filesCounter = checkRegisteredFiles();
             <div class="textobranco pictureframe"><strong>Max file size: </strong><?php  echo $uploadMaxFileSizeString; ?></div>
           </form>
 
-
-
           <!-- INFO: Date, time, Name, Size, Type, Ext -->
           <div class="textodados" id="uploadInfo"></div>
           <p></p>
@@ -104,8 +106,8 @@ $filesCounter = checkRegisteredFiles();
           </div>
 
           <!-- Uploaded, Total -->
-          <p>upload total</p>
-          <div id="uploadStatus" class="z"></div>
+          <!-- <p>upload total</p>
+          <div id="uploadStatus" class="z"></div> -->
 
         </td>
       </tr>
@@ -115,9 +117,6 @@ $filesCounter = checkRegisteredFiles();
     <center><span class="textobranco pictureframe"><?php echo 'Number of files: '.$filesCounter->filesInDataBase.' (Removed: '.$filesCounter->filesRemoved.')'; ?></span></center>
 
     <?php
-    //include 'php/crud.php';
-
-    //$varListFiles = getRegistryUpload();
     $varListFiles = $filesCounter->resultListFiles;
     if (count($varListFiles) > 0) {
       echo "<table id='tableRegistryUpload' class='lista'>";

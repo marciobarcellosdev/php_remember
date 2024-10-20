@@ -1,0 +1,33 @@
+table.Tabela_1 {
+  /* width: 1200px; */
+  /* font-size: 11px; */
+  font-size: 0.688em;
+  /* color: green; */
+ 
+}
+
+table.Tabela_1 td#tdSEND {
+  vertical-align: top;
+  /* background-color: #E5E8E8; */
+  padding-left: 15px;
+  padding-right: 15px;
+  /* color: green; */
+}
+
+table.Tabela_1 td#tdUPLOAD {
+  vertical-align: top;
+  /* background-color: orange; */
+  padding-left: 30px;
+  padding-right: 30px;
+  /* color: green; */
+}
+
+table.Envia {
+  background: none;
+  width: 80%;
+  /* width: 200px; */
+}
+table.Envia tr {
+  /*width: 100px; */
+  /* text-align: left; */
+}  
