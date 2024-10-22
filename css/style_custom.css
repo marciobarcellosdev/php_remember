@@ -12,12 +12,6 @@
 	background-color: #000000;
 }
 
-.textoverdeenvia {
-	color: #00FF00;
-	background-color: #000000;
-  font-size: 12px;
-}
-
 .textobranco {
   color: #FFFFFF;
   background-color: #000000;
@@ -40,7 +34,7 @@ textoRes {
 }
 
 textoStatus {
-	font-size: 18px;
+	/* font-size: 18px; */
 	color: #FFFF00;
 	background-color: #000000;
 }
@@ -65,7 +59,7 @@ textarea {
        /* font-weight: 400; */
        /* font-size: 16px; */
        font-family: 'Trebuchet MS', sans-serif;
-  	   font-size: 12px;
+  	   /* font-size: 12px; */
        opacity:0.6;
 }
     
@@ -76,7 +70,7 @@ input.passone {
        padding: 7px;
        border: none;
        font-family: 'Trebuchet MS', sans-serif;
-  	   font-size: 12px;
+  	   /* font-size: 12px; */
        opacity:0.6;
        width: 50px;
 }

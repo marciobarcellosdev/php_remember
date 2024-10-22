@@ -15,8 +15,6 @@
 // echo 'O IP E: '.$ip;
 
 $filesCounter = checkRegisteredFiles();
-
-
 ?>
 
 <html>
@@ -32,8 +30,6 @@ $filesCounter = checkRegisteredFiles();
   <script src="javascript/notify.min.js"></script>
   <link rel="shortcut icon" href="assets/favicon1.ico" type="image/x-icon">
   <link rel="icon" href="assets/favicon1.ico" type="image/x-icon">
-
-  <!-- https://www.cluemediator.com/ajax-post-request-with-jquery-and-php -->
 </head>
 
 <!-- <body oncontextmenu="return false;"> -->
@@ -57,7 +53,6 @@ $filesCounter = checkRegisteredFiles();
         <td id='tdSEND'>
 
           <?php // = = = = = TEXT AREA = = = = =
-          //<button class="send1" id="369" onclick="reqpass2(this.id)">del</button>
           ?>
           <form>
           <div class="textoverde pictureframe marginbottom">To Do List</div><br>
@@ -65,10 +60,10 @@ $filesCounter = checkRegisteredFiles();
             <textarea cols="90" rows="10" id="comments" wrap="hard" style="text-transform:uppercase"></textarea><br><br>
             <table class="Envia">
               <tr>
-                <td align="center"><input type="checkbox" id="CheckboxJob" disabled><div class="textoverdeenvia pictureframe">Enviar e-mail job</div></th>
-                <td align="center"><input type="checkbox" id="CheckboxEmail" disabled><div class="textoverdeenvia pictureframe">Enviar e-mail</div></th>
-                <td align="center"><input type="checkbox" id="CheckboxWhatsApp" disabled><div class="textoverdeenvia pictureframe">Enviar WhatsApp</div></th>
-                <td align="center"><input type="button" class="send1" id="btnSubmit" value="send" /></th>
+                <td align="center"><input type="checkbox" id="CheckboxJob" disabled><div class="textoverde pictureframe">Enviar e-mail job</div></th>
+                <td align="center"><input type="checkbox" id="CheckboxEmail" disabled><div class="textoverde pictureframe">Enviar e-mail</div></th>
+                <td align="center"><input type="checkbox" id="CheckboxWhatsApp" disabled><div class="textoverde pictureframe">Enviar WhatsApp</div></th>
+                <td align="center"><input type="button" class="btn-send" id="btnSubmit" value="send" /></th>
               </tr>
             </table>
           <!-- Se console limpar sozinho mudar de type: submit para type: button -->
@@ -84,9 +79,10 @@ $filesCounter = checkRegisteredFiles();
         <td id='tdUPLOAD'>
           <form id="form" method="post" enctype="multipart/form-data">
           <div class="textoverde pictureframe marginbottom">Upload file</div><br><br>
-            <input type="file" name="arquivo" class="bUpload" id="arquivo"><br>
+          <!-- <div class="eeeeee">Upload file</div><br><br> -->
+            <input type="file" name="arquivo" class="btn-upload" id="arquivo"><br>
             <br>
-            <input type="submit" name="submit" class="bUpload" id="submit" value="Upload">
+            <input type="submit" name="submit" class="btn-upload" id="submit" value="Upload">
             <br><br>
             <div class="textobranco pictureframe marginbottom"><strong>Extension:</strong> zip, 7z, rar, mp3, xml, docx, jpg, png, jpeg, gif</div>
             <br>
@@ -143,8 +139,13 @@ $filesCounter = checkRegisteredFiles();
         echo "<td id='tdExistsFile'>" . $files->exists . "</td>";
         echo "<td id='tdNameFile'>" . $files->name . "</td>";
         echo "<td id='tdDownloadsCounter'>" . $files->downloads . "</td>";
-        echo "<td id='tdDownload'><button class='send1' id=" . $files->control . " onclick='downloadFile(this.id)'>download</button></td>";
-        echo "<td id='tdDelete'><button class='send1' id=" . $files->control . " onclick='deleteRegistryUpload(this.id)'>delete</button></td>";
+        if($files->exists == 'Yes'){
+            echo "<td id='tdDownload'><button class='btn-download' id=" . $files->control . " onclick='downloadFile(this.id)'>download</button></td>";
+            echo "<td id='tdDelete'><button class='btn-delete' id=" . $files->control . " onclick='deleteRegistryUpload(this.id)'>delete</button></td>";
+        }else{
+          echo "<td id='tdDownload'><button class='btn-download' id=" . $files->control . " onclick='downloadFile(this.id)' disabled>download</button></td>";
+          echo "<td id='tdDelete'><button class='btn-delete' id=" . $files->control . " onclick='deleteRegistryUpload(this.id)' disabled>delete</button></td>";
+        }
         echo "<td></td></tr>";
       }
       echo "</tbody></table>";
@@ -206,7 +207,7 @@ $filesCounter = checkRegisteredFiles();
         echo "<td id='tdTime'>" . $row["time"] . "</td>";
         echo "<td id='tdAbout'>" . $row["about"] . "</td>";
         echo "<td id='tdComment'> " . nl2br($row["comment"]) . "</td>";
-        echo "<td id='tdDelete'><button class='send1' id=" . $row["control"] . " onclick='deleteRegistry(this.id)'>delete</button></td>";
+        echo "<td id='tdDelete'><button class='btn-delete' id=" . $row["control"] . " onclick='deleteRegistry(this.id)'>delete</button></td>";
         echo "<td></td></tr>";
       }
       echo $tableRegistryEnd;
