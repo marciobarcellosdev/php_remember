@@ -1,17 +1,17 @@
 
 :root {
-  --font_size_12: 10px;
+  --font-size-site: 11px;
 }
 
 body {
+  background-color: white;
   background-color:  #060e13;
   background-image: url("../assets/img7.jpg");
-  font-size: var(--font_size_12);
+  font-size: var(--font-size-site);
   color: #000000; 
   font-family: 'Trebuchet MS', sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* This is what makes the background image rescale based on its container's size */
   background-size: cover;
   height: 100%;
   margin-top: 10px;
@@ -38,32 +38,19 @@ a:active {
   color: #4169E1;
 }
 
-div.wrapper {
-min-height: 100%;
-  /* Equal to height of footer */
-  /* But also accounting for potential margin-bottom of last child */
-  margin-bottom: -40px;
+#page-container {
+  position: relative;
+  min-height: 100vh;
 }
 
-div.push {
-  height: 40px;
+#content-wrap {
+  padding-bottom: 1.563rem; /* 25px Footer height */
 }
 
-div.footer {
-display: flex;
-  align-items: center;
-  height: 40px;
-  padding-left: 5px;    
-  background-color: #000000;
-  color: black;
-  font-size: var(--font_size_12);
-  /* opacity:0.8; */
+#footer {
+  position: absolute;
+  bottom: 0;
+  height: 1.563rem; /* 25px Footer height */
+  padding-left: 15px; 
 }
-
-/*
-wrap="hard"
-
-hard : The input text is wrapped within the text area. (The text submitted to the server contains line breaks.)
-soft : The input text is wrapped within the text area. (The text submitted to the server doesn't contain line breaks.)
-off : The input text is not wrapped.
-*/
+/* https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */

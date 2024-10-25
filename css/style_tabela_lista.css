@@ -9,7 +9,7 @@ table.lista {
 table.lista th {
   border-bottom: 1px solid #364043;
   color: black;
-  font-size: var(--font_size_12);
+  font-size: var(--font-size-site);
   font-weight: 400;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -153,7 +153,7 @@ table.lista tr:nth-child(even) {
 
 table.lista td {
   color: #00008B;
-  font-size: var(--font_size_12);
+  font-size: var(--font-size-site);
   /* padding: 0.65em 1em; */
   padding-top: 5px;
   padding-bottom: 5px;
