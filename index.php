@@ -35,9 +35,12 @@ $filesCounter = checkRegisteredFiles();
 <!-- <body oncontextmenu="return false;"> -->
 <body>
 
-<div id="page-container"> <!-- DIV WRAPPER -->
+<div id="page-container">
+<!-- DIV WRAPPER -->
   <!-- <script src="scripts/desativar.js"></script> -->
-  <div id="content-wrap"> <!-- DIV CONTENT-WRAP -->
+  
+  <div id="content-wrap">
+  <!-- DIV CONTENT-WRAP -->
 
   <script src="javascript/form_send.js"></script>
   <script src="javascript/form_delete.js"></script>
@@ -220,9 +223,13 @@ $filesCounter = checkRegisteredFiles();
   }
   ?>
 
-</div> <!-- DIV CONTENT-WRAP -->
+</div>
+<!-- DIV CONTENT-WRAP -->
+
 <footer id="footer" class="textofooter pictureframe">Developer: Marcio Barcellos | Created on: 24/08/2019 | Last update: 03/04/2020 > 14/02/2022 > 03/10/2022 > 14/12/2023 > 19/10/2024</footer>
-</div> <!-- DIV WRAPPER -->
+
+<!-- DIV WRAPPER -->
+</div>
 
 </body>
 </html>

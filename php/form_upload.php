@@ -5,8 +5,8 @@ define ('SITE_ROOT_UPLOAD', realpath(dirname(__FILE__, 2)));
 
 include 'crud.php';
 include 'notify_define.php';
-//include 'api_whatsapp.php';
 include 'max_file_size.php';
+//include 'api_whatsapp.php';
 
 $return_arr = array();
 
@@ -42,11 +42,9 @@ $varUploadDate = date("Y/m/d");
 $varUploadTime = date("H:i:s");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    
     if(isset($_FILES["arquivo"]) && $_FILES["arquivo"]["error"] == 0){
 
-        //$allowed = array('zip', '7z', 'rar', 'mp3', 'xml', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'exe'); 
-        $allowed = array('zip', '7z', 'rar', 'mp3', 'xml', 'docx', 'jpg', 'png', 'jpeg', 'gif', 'exe'); 
+        $allowed = array('zip', '7z', 'rar', 'mp3', 'xml', 'docx', 'jpg', 'png', 'jpeg', 'gif'); 
         
         $fileName = $_FILES["arquivo"]["name"];
         $fileType = $_FILES["arquivo"]["type"];
@@ -119,10 +117,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 //echo json_encode($return_arr);
             } 
         } else{
-            $return_arr['uploadError'] = 'There was a problem uploading your file. Please try again';
+            $return_arr['notifyMsg'] = OCORREU_ERRO_ADICIONAR; // AJUSTAR MSG
+            $return_arr['notifyType'] = TYPE_ERROR;
+
+            // $return_arr['uploadError'] = 'There was a problem uploading your file. Please try again';
         }
     } else{
-        $return_arr['uploadError'] = 'Error: ' . $_FILES["arquivo"]["error"];
+        $return_arr['notifyMsg'] = OCORREU_ERRO_ADICIONAR; // AJUSTAR MSG
+        $return_arr['notifyType'] = TYPE_ERROR;
+
+        // $return_arr['uploadError'] = 'Error: ' . $_FILES["arquivo"]["error"];
     }
 }
 //var_dump($return_arr);

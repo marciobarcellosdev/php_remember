@@ -24,4 +24,9 @@ define("NUMERO_DOWNLOADS_ATUALIZADO", "O número de downloads foi atualizado");
 //define("OCORREU_ERRO_API", "Como ocorreu erro ao inserir registro a mensagem não foi enviada para WhatsApp");
 //define("OCORREU_ERRO_ADICIONAR", "Ocorreu erro ao adicionar registro (confime se a senha está correta)");
 
+// UPLOAD
+define("NAO_PERMITIDO_TAMANHO", "Tamanho de arquivo acima do permitido");
+define("NAO_PERMITIDO_EXTENSAO", "Extensão de arquivo não permitida");
+
+
 ?>

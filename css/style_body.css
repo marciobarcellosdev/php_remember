@@ -38,19 +38,21 @@ a:active {
   color: #4169E1;
 }
 
+/* FOOTER */
+
 #page-container {
   position: relative;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 #content-wrap {
-  padding-bottom: 1.563rem; /* 25px Footer height */
+  padding-bottom: 25px;
 }
 
 #footer {
   position: absolute;
   bottom: 0;
-  height: 1.563rem; /* 25px Footer height */
+  height: 25px;
   padding-left: 15px; 
 }
 /* https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
