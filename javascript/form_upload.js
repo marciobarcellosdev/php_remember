@@ -20,14 +20,15 @@ $(document).ready(function(e) {
       return response.json();
     })
     .then(data => {
-      console.log('data.sizeLimit: ' + data.sizeLimit);
-      console.log('data.sizeFile: ' + data.sizeFile);
+      //console.log('data.sizeLimit: ' + data.sizeLimit);
+      //console.log('data.sizeFile: ' + data.sizeFile);
       
       
       if(!data.continueUpload){
         $.notify(data.notifyMsg, data.notifyType);
       }else{
-        $.ajax({ //ajax
+        $.ajax({
+        //ajax
           xhr: function() {
             var xhr = new window.XMLHttpRequest();
             xhr.upload.addEventListener("progress", function(evt) {
@@ -87,8 +88,8 @@ $(document).ready(function(e) {
             //alert(request.responseText);
             $('#valueComments').text(request.responseText);
           }
-        }); //ajax  
-
+        //ajax  
+        });
       }
     })
     .catch(error => {

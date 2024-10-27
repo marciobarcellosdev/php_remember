@@ -1,6 +1,7 @@
 <?php
 
 include 'notify_define.php';
+include 'file_extensions.php';
 $return_arr = array();
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -9,8 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //CHECK FILE EXTENSION
     $fileName = $_FILES["arquivo"]["name"];
     $fileExt = pathinfo($fileName, PATHINFO_EXTENSION);
-    $allowed = array('zip', '7z', 'rar', 'mp3', 'xml', 'docx', 'jpg', 'png', 'jpeg', 'gif');  // excel, word, powerpoint, bmp
-    if(in_array($fileExt, $allowed)){
+    if(in_array($fileExt, $allowedExt)){
       $return_arr['continueUpload'] = true;
     }else{
       $return_arr['continueUpload'] = false;
@@ -48,14 +48,14 @@ echo json_encode($return_arr);
 // post_max_size: funcionalidade similar ao upload_max_filesize
 
 // NET
-// memory_limit 128M
-// upload_max_filesize 5M
+// memory_limit 1024M
+// upload_max_filesize 50M
 // post_max_size 50M
 
 // LOCAL
 // memory_limit 1024M
 // upload_max_filesize 50M
-// post_max_size 100M
+// post_max_size 50M
 
 ?>
 

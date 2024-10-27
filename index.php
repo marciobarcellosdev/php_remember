@@ -1,4 +1,5 @@
 <?php include 'php/max_file_size.php'; ?>
+<?php include 'php/file_extensions.php'; ?>
 <?php include 'php/check_registered_files.php'; ?>
 <?php 
 //echo $_SERVER['HTTP_HOST'];
@@ -87,9 +88,9 @@ $filesCounter = checkRegisteredFiles();
           <br>
           <input type="submit" name="submit" class="btn-upload" id="submit" value="Upload">
           <br><br>
-          <div class="textobranco pictureframe marginbottom"><strong>Extension:</strong> zip, 7z, rar, mp3, xml, docx, jpg, png, jpeg, gif</div>
+          <div class="textobranco pictureframe marginbottom"><strong>Supported extensions:</strong> <?php echo $allowedExtensions; ?></div>
           <br>
-          <div class="textobranco pictureframe"><strong>Max file size: </strong><?php  echo $uploadMaxFileSizeString; ?></div>
+          <div class="textobranco pictureframe"><strong>File size limit: </strong><?php  echo $uploadMaxFileSizeString; ?></div>
         </form>
 
         <!-- INFO: Date, time, Name, Size, Type, Ext -->
